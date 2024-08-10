@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Deface</title>
+   
+      <!-- CSS Code Start -->
+   
+   <style type="text/css" media="all">
+   
+      * {
+         background-color: black;
+         margin: 0 0 0 0;
+         padding: 0 0 0 0;
+         font-family: sans-serif;
+      }
+      
+      .container {
+         position: relative;
+         overflow: hidden;
+         width: 100%;
+         height: 100vh;
+      }
+      
+      .topText{
+         width: 80%;
+         margin: auto;
+      }
+      
+      .topText marquee{
+         color: greenyellow;
+         font-size: 20px;
+         margin: 50px 0 0 0;
+         font-weight: 300;
+         letter-spacing: 1.5px;
+      }
+      
+      .headerContainer p {
+         text-align: center;
+         font-weight: 500;
+         font-size: 50px;
+         color: #FF3B00;
+         margin: 0;
+        
+      }
+      
+      .headerContainer {
+         position: relative;
+         width: fit-content;
+         margin: 50px auto 0 auto;
+      }
+      
+      .shadow{
+         position: absolute;
+         z-index: 1000;
+         top: 0px;
+         left: 0px;
+         height: 50px;
+         width: 30px;
+         background-color: rgba(0, 0, 0, 0.4);
+      }
+      
+      .msgContainer {
+         width: 50%;
+         height: 120px;
+         max-height: 300px;
+         padding: 25px;
+         border-radius: 10px;
+         border: 1px solid #FF3B00;
+         margin: 0 auto;
+      
+      }
+      
+      .textTyping {
+         text-align: left;
+         color: greenyellow;
+         font-size: 20px;
+         font-weight: 300;
+         letter-spacing: 1.5px;
+      }
+      
+      .bottomText {
+         width: fit-content;
+         text-align: center;
+         margin: 50px auto;
+      }
+      
+      .bottomText p:nth-child(1) {
+         font-size: 80px;
+         color: #FF3B00;
+         font-family: serif;
+         margin-bottom: 10px;
+      }
+      
+      .bottomText p:nth-child(2) {
+         color: greenyellow;
+         font-size: 20px;
+         font-weight: 300;
+         letter-spacing: 1.5px;
+      }
+      
+      .imgContainer {
+         width: fit-content;
+         margin: 20px auto;
+      }
+      
+      .imgContainer img {
+         width: 250px;
+      }
+      
+      .sideImg1 img {
+         width: 800px;
+         position: absolute;
+         top: 30%;
+         left: -350px;
+         opacity: 0.3;
+      }
+      
+      .sideImg2 img {
+         width: 800px;
+         position: absolute;
+         top: 30%;
+         right: -350px;
+         opacity: 0.3;
+      }
+      
+   </style>
+   
+      <!-- CSS Code End -->
+   
+</head>
+<body>
+   
+   <div class="container">
+      
+      <div class="topText"><marquee>Stop killing Bangladeshi people on Bangladesh-India border!</marquee></div>
+      
+      <div class="headerContainer">
+         <p class="text">H4CK3D BY MRCYB3RK1NG</p>
+         <div class="shadow"></div>
+      </div>
+      
+      <br><br><br>
+      
+      <div class="msgContainer">
+         <p class="textTyping"></p>
+      </div>
+      
+      <div class="bottomText">
+         <p>H4CK3D!</p>
+         <p>Codded by mrcyb3rk1ng</p>
+      </div>
+      
+      <div class="imgContainer">
+         <img id="centerImg" src="binary.png" alt="">
+      </div>
+      
+      <div class="sideImg1">
+         <img id="leftImg" src="binary.png" alt="">
+      </div>
+      
+      <div class="sideImg2">
+         <img id="rightImg" src="binary.png" alt="">
+      </div>
+   </div>
+   
+   <!-- JavaScript Code Start -->
+   
+   <script>
+   
+      /*For Animating Heading Text */
+      
+      const shadow = document.querySelector(".shadow");
+      let a = 0;
+      
+      setInterval(() => {
+         shadow.style.left = `${a}px`;
+         
+         if (++a === 600) {
+            a = 0;
+         }
+         
+      },10); 
+
+      /* For Typing Message */
+      
+      const textTyping = document.querySelector(".textTyping");
+      
+      const string = "Message for Admin : We are Bangladeshi Hackers. We hacked this site to protest against the regular killings by terrorist group BSF on the border. If the killings do not stop, our attack will continue. !!!";
+      let textContent = "";
+      
+      const msgRepeater = () => {
+         let i = 0;
+         let interval = setInterval(() => {
+            let letterOfString = string[i];
+            textContent += letterOfString;
+            textTyping.textContent = textContent + "_";
+         
+            if (++i === string.length) {
+               clearInterval(interval);
+               textTyping.textContent = textContent;
+               setTimeout(() => {
+                  textContent = "";
+                  msgRepeater();
+               },5000);
+            }
+         
+         }, 100);
+      };
+      
+      msgRepeater();
+      
+      /* img animation */
+      
+      const centerImg = document.getElementById("centerImg");
+      const leftImg = document.getElementById("leftImg");
+      const rightImg = document.getElementById("rightImg");
+      
+      let transform = 0;
+      setInterval(() => {
+         centerImg.style.transform = `rotate(${transform}deg)`;
+         leftImg.style.transform = `rotate(${transform}deg)`;
+         rightImg.style.transform = `rotate(${transform}deg)`;
+         transform++;
+      },50);
+      
+   </script>
+</body>
+</html>.card:nth-child(1){
+background-color: red;
+}
